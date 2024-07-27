@@ -1,0 +1,9 @@
+viewing the source code can be helpful = code , links or images can reveal data
+as well as comments given 
+
+developer tools = ex: inspector, debugger, and network 
+
+opening developer tools =  frefox/edge/chrome = - 3 lines, more tools, web developer tools 
+
+inspector = views whats been displayed in the browser window at this exact time. Element inspector assists us with this by providing us with a live representation of what is currently on the website.
+

@@ -1,0 +1,98 @@
+Windows Fundmental 3
+
+windows update = provides security updates, feature enhancements, and patches for the window operating system 
+
+access window update through setting or running cmd (control /name Microsoft.WindowsUpdate)
+
+windows security = virus & threat protection, Firewall & network protection, App & browser control, Device security.
+
+Green = device is sufficiently protected, and there aren't any recommended actions
+yellow = safety recommendation for u to review 
+red = warning that something needs immediate attention
+
+virus & threat protection = current threats, virus & threat protection settings
+---current threats
+#############
+--scan option
+#############
+-quick scan = checks folders in your system where threats are commonly found
+-full scan = checks all files and running programs on your hard disk. this scan could take longer than one hour
+-custom scan = choose which files and locations you want to check
+################
+--threat history
+################ 
+-last scan = windows defender antivirus automatically scans your device for viruses and other threats to help keep it safe 
+-quarantined threats = have been isolated and prevented from running on your device. periodically removed
+-allowed threats = allowed threats are items identified as threats, that were allowed to run on your device.
+
+virus & threat protection settings
+-real-time protection = locates and stops malware from installing or running on your device
+-cloud-delivered protection = Provides increased and faster protection with access to the latest protection data in the cloud.
+-Automatic sample submission = Send sample files to Microsoft to help protect you and others from potential threats. 
+-Controlled folder access = Protect files, folders, and memory areas on your device from unauthorized changes by unfriendly applications.
+-Exclusions = Windows Defender Antivirus won't scan items that you've excluded.
+-Notifications = Windows Defender Antivirus will send notifications with critical information about the health and security of your device. 
+
+virus & threat protection updates = check for updates to update windows defender antivirus definition
+
+ransomware protection = controled folder access =  Ransomware protection requires this feature to be enabled, which in turn requires Real-time protection to be enabled.
+-------------------------------|
+*******************************|
+
+firewall = controls the traffic that goes in out of the ports
+
+Firewall & network protection = 3 sections = Domain, privat, public
+Domain = the profile applies where the host system can authenticate to a domain controller. 
+Private = The private profile is a user-assigned profile and is used to designate private or home networks.
+Public = The default profile is the public profile, used to designate public networks such as Wi-Fi hotspots at coffee shops, airports, and other locations.
+NEXT
+turn the firewall on/off   and block all incoming connections
+
+##############
+TO OPEN WINDOWS FIREWALL IN COMMAND USE WF.msc
+##############################################
+
+
+Microsoft Defender SmartScreen = protects against phishing or malware websites and applications and the downloading of potentially malicious files
+
+checks apps and files = windows defender smartscreen = helps protect your device by checking for unrecognized apps and files from the web.
+exploit protection = Exploit protection is built into Windows 10 (and, in our case, Windows Server 2019) to help protect your device against attacks
+------------------------
+
+core isolation = Memory Integrity = Prevents attacks from inserting malicious code into high-security processes.
+
+TPM = Trusted Platform Module = provides additional encryption for your device 
+it also makes it tamper resistant and malicious software is unable to tamper with the security functions of the tpm
+---------------
+
+Bitlocker Drive encryption = is a data protection feature that integrates with the operating system and addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers
+
+if tpm installed = bitlocker offer best protection
+
+if dont have tpm = USE USB startup key
+------------------------------------------
+Volume Shadow Copy Service(VSS) = coordinates  the required actions to create a consistent shadow copy (also known as a snapshot or a point-in-time copy) of the data that is to be backed up
+they are stored on the system volume info folder on each drive that has protection enabled
+
+if vss in enabled (system protection turn on) you can perform the task in advanced settings
+- Create a restore point
+- Perform system restore
+- Configure restore settings
+- Delete restore points
+
+malware writers write code in their malware to loook for these files and delete them within this feature
+that way it makes it impossible to recover from ransomware attacks. unless theirs an offline/off site backup
+
+to learn more on windows os pursue 
+- antimalware scan interface
+- credential guard 
+- windows 10 hello
+- cso online - the best new windows 10 security feature 
+
+Note: Attackers use built-in Windows tools and utilities in an 
+attempt to go undetected within the victim environment.  
+This tactic is known as Living Off The Land. Refer to the 
+following resource here to learn more about this. 
+
+
+

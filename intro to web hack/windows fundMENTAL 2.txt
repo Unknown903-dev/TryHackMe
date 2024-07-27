@@ -1,0 +1,112 @@
+Windows Fundentals  2
+
+to view the commands to open certain tools use msconfig in start menu search 
+
+
+
+continueing tools that are in the SYSTEM CONFIGURATION panel
+-computer management(compmgmt) utility has 3 sections
+-system tools, storage, and services and applications
+
+-----SYSTEM TOOLS
+task scheduler = can create and manage common tasks that our computer will carry out automaticallly at time we specify
+
+to create basic task = click basic task under actions
+
+-EVENT VIEWER = allows us to view events that have occured on the computer.
+similar to an audit trail to understand the activity of the comp system
+
+USED TO diagnose problems and investigate actions executed on the systems 
+
+3 panes = event viewers
+1. pane=left, provide a hierarchal tree listing of the event log providers
+2. pane=middle, display a general overview and summary of the event sppecific to a selected provider
+3. pane=right,is action pane
+
+sharefolders=see a list of shares and folders shared that others can connect to
+
+in any object in windows you can right click on folder to view properties like permissions
+under sessions you will see a list of users who are currently connected to the shares 
+
+all folders/files that connected users access will list under open files 
+local users and groups section = in windows fund 1, lusrmgr.msc
+
+--performance= utility performance monitor (perfmon)
+perfmon is used to view performance data either in real time or from a log file
+this utility is useful for troubleshooting performance issues on a computer system, wether local or remote
+
+--Device Manger = allows us to view and configure the hardware, like disabling any hardware attatched to computer
+
+--Storage = window server backup and disk management 
+disk management is a system utility in windows that enables you to perform advanced storage task
+some task-
+-setup new drive 
+-extend a partition 
+-shrink a partition
+-assign or change a drive letter (E:)
+
+----services and applications
+service = specail application that runs in the background.  
+here you can do more that enable and disable a service such as view the properties for the service
+
+WMI control configures an controls the Windows Management instrumentation service
+-allows scripting languages like vb script or windows powershell
+-----------------------------------------------------
+System information = msinfo32 = type in search bar of start menu
+
+Msinfo32.exe = gathers info about ur comp an display a comprensive view of your hardware, system components, and software environment, which you can use to diagnose comp issues
+
+system summary 3 sections
+- hardware resources, components, software environment
+
+for info regarding the harware resources
+https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/hardware-resources
+
+components = can see specific info about the hardware devices installed on the comp
+some sections show display and input
+
+software environment = see info about software baked into operating system and software installed 
+.as well as environment variables and network connections
+
+can also view ENVIRONMENT VARIABLES = control panel > system and security > system > advanced system settings > environment variables --OR -- settings > system > about > system info > advanced system setting > environment variables
+-------------------
+continueing with system configuration panel
+
+Recourse monitor (resmon) = displays per process and aggregate CPU memory, disk, and network usage info, etc...
+this utility is geared primarily to advanced users who need to perform troubleshooting on the comp system
+
+resmon 4 sections
+-CPU
+-disk
+-network
+-memory
+---------------------------------$$$$$$$$$******************
+continueing with system configuration 
+command prompt =cmd
+
+hostname = output = THM-WINFUN2
+whoami = output = thm-winfun2\administrator
+
+ipconfig = show network address settings for the computer 
+-to retrieve the help command use ipconfig /?
+
+ex: ipcofig /?
+
+clear command prompt = cls
+
+netstat = display protocol stats and current TCP/IP network connections
+-----------------------------------
+continueing with tools = system config
+
+windows registery = central hierarchical database used to store info necessary to config the system for one or more users, application, and hardware devices 
+-profiles for each user
+-application installed on the comp and the types of docs that each can create 
+-property sheet settings for folders and application icons 
+-what hardware exist on the system 
+-the ports that are being used 
+
+WARNING = registery is for advanced comp users changes can effect the comp
+
+can view or edit by registry editor (regedit)
+
+
