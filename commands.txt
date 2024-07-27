@@ -1,0 +1,98 @@
+history 			= shows commands used by the user
+locate file_name		= shows the directory of the file
+-------------------------------------------------------------------
+nmap ip_address			= helps discover running machines/programs
+ftp ip_adress			= connect to ftp server
+get file_name			= downloads file					could be useful
+exit or bye 			= exit ftp server
+
+
+ping ip_address or url 			=
+
+nc ip_address ping_num 
+-------------------------------------------------------------------
+whoami  			= show the user u are logged in as
+echo "Hello"			= Hello
+cat file_name 			= prints the text file
+pwd				= shows the directory						meh (loction of files)
+find -name file_name 		= to find a specific file
+find -name *.txt		= finds all text files
+
+wc -1 file_name			= shows the amount of entries aka txt
+------------------------------------------------------------------
+grep "value_type" file_name 	= checks the file and shows all the stuff that contains the value type
+
+& 				= run command in back ground
+&& 				= combine muiltiple commands together in one line				USEFULL
+echo want_printed > file_name	= print something in another folder but deletes everything in folder
+each want_printed >> file_name	= same thing but not delete everything 
+----------------------------------------------
+ssh user_name@ip_address	= logging in
+su user_name			= switch accounts 									meh
+su - user_name
+
+xfreerdp /u:Wade /v:IP_Adress		= to login through desktop
+
+ls -all 			= shows all folders including hidden ones
+--------------------------------------------
+--help 				= gives possible commands
+file file_name			= shows file type
+
+nano file_name			= create or edit file
+ctrl x 				= exit
+
+-----------------------------------------------------------------------------------------
+
+wget https://assets.tryhackme.com/additional....	= downloads files from web
+
+scp file_name remote_system@ip_address:(directory_of_file)  = copy file my machine to remote machine			WE SHOULD TEST IT 
+scp important.txt ubuntu@192.168.1.30:/home/ubuntu/transferred.txt
+scp remote_system@ip_address:directory_of_file file_name   =  copy a file on our system from a remote system
+scp ubuntu@192.168.1.30:/home/ubuntu/documents.txt notes.txt 
+notes is the file we want to store the file
+-------------------------------------------------------------------------------------------------------------------
+DONE IN TRYHACKME USER
+python3 -m http.server			= directory of the webserver need for wget shows the port number
+DONE IN ROOT USER
+wget http://ip_address:port_num/file_name	= copies file
+
+ps 					= shows status code, session that is runnin it, and time of cpu it uses 
+ps aux 					= see processes run by users and those that don;t run from session
+kill pid_num				= kills the command 
+
+systemctl [option] [service]
+options: start, stop, enable, disable
+
+ps aux | less
+min hour day_of_M M_of_year Dow
+0 */12 * * * cp -R /home/cmnatic/Documents /var/backups/
+crontab	-e				= edit crontab
+---------------------------------------------------
+content discovery
+
+curl website_found md5sum  = downloads the fav icon and get its md5 hash value can be look up on https://wiki.owasp.org/index.php/OWASP_favicon_database.
+or
+power shell
+curl https://static-labs.tryhackme.cloud/sites/favicon/images/favicon.ico -UseBasicParsing -o favicon.ico
+Get-FileHash .\favicon.ico -Algorithm MD5
+------------------------------------------------------------------------------------------------------------
+
+ffuf -w /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt -u http://MACHINE_IP/FUZZ
+
+dirb http://MACHINE_IP/ /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt
+
+gobuster dir --url http://MACHINE_IP/ -w /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt
+----------------------
+subdomain enumeration section = uses a file with list of names to find predefined list of commonly used subdomains
+dnsrecon -t brt -d acmeitsupport.thm
+-----------------------
+sublist3r
+./sublist3r.py -d acmeitsupport.thm  = speed up proccesso of osint subdomain discovery
+----------------------------
+• ffuf -w /usr/share/wordlists/SecLists/Discovery/DNS/namelist.txt -H "Host: FUZZ.acmeitsupport.thm" -u http://<domain name/ip address>
+Switches:
+-w > wordlist
+-H > adds/edits a header
+-u > url
+-fs > tells ffuf to ignore any results that are of the specified size
+---------------------------------------
