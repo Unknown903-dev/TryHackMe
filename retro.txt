@@ -1,0 +1,48 @@
+
+1st
+nmap ip_adress = shows the ports are open
+since port 80 is open we can look up the ip_address
+------
+gobuster dir -u http://10.10.23.214 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+= shows list of directories being ran
+
+check for ip_adress website and the ones that are found ex: /retro and /Retro
+
+-----
+didnt find anything on other websites so went back to /retro website
+inspected it
+and /wp-admin is not there but others are i pressed on index and found login page
+
+/retro/wp-login.php
+-----------------------
+go back to /retro website
+seek for possible user info
+
+we find wade
+and his fav character in ready player one is name wade
+but the avatar of character is parsival
+------
+darkstar@darkstar7471.com also found
+-----
+xfreerdp /u:Wade /v:IP_Adress		= to login through desktop
+then go cmd
+cd /
+cd users
+dir
+
+go back to original directory 
+systeminfo
+whoami /all
+Usually if the machine is a Windows 10 with version 1809 or higher, or a Windows Server 2019,
+ we can use something like Rogue Potato attack to escalate privileges. Otherwise, we can try a Juicy Potato attack.
+
+‘SeImpersonatePrivilege’
+‘SeAssignPrimaryTokenPrivilege’.
+we end up finding out it can not be used
+----------
+
+xfreerdp /u:Wade /v:IP_Adress
+systeminfo
+-----------------------------------
+unfinished
+
