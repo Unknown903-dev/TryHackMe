@@ -1,0 +1,33 @@
+command: gobuster -u http://fakebank.com -w wordlist.txt dir
+
+-u 	is used to state the website we're scannning
+-w	takes a lsit of words to iterate through to find the hidden pages
+
+
+Topic what is networking
+The internet is a bunch of small networks joined together. These small networks are private networks, 
+where networks connecting these small networks are called public networks.
+
+IDENTIFYING A DEVICE ON A NETWORK
+IP (internet protocol)address - each section of an ip address is an octet (4 sections)
+IP addresses can change from device to device but cannot be active simultaneously more than once 
+within the same network.
+A public address is used to identify the device on the Internet, whereas a private address 
+is used to identify a device amongst other devices. 
+
+Mac (Media access control) address
+12 char hexadecimal number
+first 6 represents the company that made the network interface, the last 6 is a unique number.
+
+PING (ICMP) - internet control message protocol
+to check you ping insert - ping (your ip addres
+
+open source databases- Abuseipdb and cisco talos intelligence
+reputation and location chck for ip address and reporting malicious ip
+
+
+
+
+
+
+
